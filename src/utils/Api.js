@@ -12,13 +12,29 @@ const restaurants = [
       Recommended: [
         { name: "Margherita Pizza", price: "₹800", avgRating: 4.6,
           image: "https://media.istockphoto.com/id/1400137973/photo/pizza-chef-serving-freshly-baked-pizza.webp?a=1&b=1&s=612x612&w=0&k=20&c=l86glbhCg2_dxv6UihEwWPo8D1T9jZo4Cu6FzmRgKF0="
+         },
+         { name: "Cheese Pizza", price: "₹900", avgRating: 4.7,
+          image: "https://images.unsplash.com/photo-1520201163981-8cc95007dd2a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hlZXNlJTIwcGl6emF8ZW58MHx8MHx8fDA%3D"
+         },
+         { name: "Margarita pizza", price: "₹600", avgRating: 4.5,
+          image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
          }
       ],
       Drinks: [
-        { name: "Coke", price: "₹160", avgRating: 4.4 }
+        { name: "Coke", price: "₹160", avgRating: 4.4,
+          image: "https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         },
+         { name: "sprite", price: "₹160", avgRating: 4.4,
+          image: "https://images.unsplash.com/photo-1680404005217-a441afdefe83?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaXRlfGVufDB8fDB8fHww"
+         },
+         { name: "pepsi", price: "₹160", avgRating: 4.4,
+          image: "https://images.unsplash.com/photo-1553456558-aff63285bdd1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVwc2l8ZW58MHx8MHx8fDA%3D"
+         }
       ],
       "Our Special": [
-        { name: "Cheese Burst Pizza", price: "₹1100", avgRating: 4.7 }
+        { name: "Cheese Burst Pizza", price: "₹1100", avgRating: 4.7,
+          image: "https://images.unsplash.com/photo-1732223229355-95a1433404bf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         }
       ]
     }
   },

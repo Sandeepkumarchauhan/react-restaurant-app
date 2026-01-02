@@ -207,7 +207,7 @@
       });
     }
   }
-})({"kLVaV":[function(require,module,exports,__globalThis) {
+})({"aHhNZ":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -746,6 +746,6 @@ $RefreshReg$(_c, "Grocery");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"iRL2I","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"cmC7m"}]},["kLVaV"], null, "parcelRequire94c2", {})
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["aHhNZ"], null, "parcelRequire94c2", {})
 
 //# sourceMappingURL=Grocery.390591cb.js.map

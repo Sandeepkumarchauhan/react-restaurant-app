@@ -1,12 +1,10 @@
 import { useContext } from "react";
-import { CDN_URL } from "../utils/constants";
 import UserContext from "../utils/UserContext";
 
 const RestaurantCard = ({ resData }) => {
   const { loggedInUser } = useContext(UserContext);
 
   const {
-    cloudinaryImageId,
     name,
     avgRating,
     cuisines,
@@ -16,45 +14,53 @@ const RestaurantCard = ({ resData }) => {
   } = resData;
 
   return (
-    <div className="relative m-4 p-4 w-full sm:w-[250px] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-200">
-      {/* Restaurant Image */}
-      <img
-        className="w-full h-40 object-cover rounded-lg"
-        alt="res-logo"
-        src={image}
-      />
+    <div className="relative m-3 w-full sm:w-[260px] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
 
-      {/* Name and Cuisines */}
-      <h3 className="font-bold py-2 text-lg">{name || "Restaurant"}</h3>
-      <p className="text-sm text-gray-600">
-        {Array.isArray(cuisines) ? cuisines.join(", ") : "Various Cuisines"}
-      </p>
+      {/* Image */}
+      <div className="relative">
+        <img
+          className="w-full h-40 object-cover"
+          alt={name}
+          src={image}
+        />
 
-      {/* Details */}
-      <div className="flex justify-between mt-2 text-sm">
-        <span>⭐ {avgRating || "N/A"}</span>
-        <span>{price} FOR TWO</span>
+        {/* Rating Badge */}
+        <span className="absolute bottom-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded-md">
+          ⭐ {avgRating || "N/A"}
+        </span>
       </div>
-      <div className="mt-1 text-sm">⏱ {deliveryTime || "N/A"} mins</div>
 
-      {/* Logged-in User */}
-      <div className="mt-2 text-xs text-gray-500">User: {loggedInUser || "Guest"}</div>
+      {/* Content */}
+      <div className="p-4">
+        <h3 className="font-bold text-lg truncate">{name || "Restaurant"}</h3>
+
+        <p className="text-sm text-gray-600 truncate">
+          {Array.isArray(cuisines) ? cuisines.join(", ") : "Various Cuisines"}
+        </p>
+
+        <div className="flex justify-between items-center mt-3 text-sm text-gray-700">
+          <span className="font-semibold">{price} for two</span>
+          <span>⏱ {deliveryTime || "N/A"} mins</span>
+        </div>
+
+        <div className="mt-2 text-xs text-gray-400">
+          User: {loggedInUser || "Guest"}
+        </div>
+      </div>
     </div>
   );
 };
 
-// Higher Order Component for Promoted Label
+// 🔥 HOC for Promoted Label
 export const withPromtedLabel = (RestaurantCard) => {
-  return (props) => {
-    return (
-      <div className="relative">
-        <label className="absolute top-2 left-2 bg-black text-white p-1 px-2 rounded-md text-xs z-10">
-          Promoted
-        </label>
-        <RestaurantCard {...props} />
-      </div>
-    );
-  };
+  return (props) => (
+    <div className="relative">
+      <span className="absolute top-2 left-2 z-10 bg-black/80 text-white text-xs px-2 py-1 rounded-md">
+        Promoted
+      </span>
+      <RestaurantCard {...props} />
+    </div>
+  );
 };
 
 export default RestaurantCard;

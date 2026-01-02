@@ -4,7 +4,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
-import  restaurants from "../utils/Api"; // <-- Make sure Api.js exports 'restaurants'
+import restaurants from "../utils/Api";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestraunt] = useState([]);
@@ -16,40 +16,40 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   const { loggedInUser, setUserName } = useContext(UserContext);
 
-  // Set local restaurant data
   useEffect(() => {
-    if (restaurants && restaurants.length > 0) {
-      setListOfRestraunt(restaurants);
-      setFilteredRestaurant(restaurants);
-    }
+    setListOfRestraunt(restaurants);
+    setFilteredRestaurant(restaurants);
   }, []);
 
-  if (!onlineStatus)
+  if (!onlineStatus) {
     return (
-      <h1>
-        Looks like you're offline!! Please check your internet connection;
+      <h1 className="pt-32 text-center text-xl font-semibold">
+        Looks like you're offline 😕
       </h1>
     );
+  }
 
-  // Safety check: if restaurants not loaded yet
-  if (!listOfRestaurants || listOfRestaurants.length === 0) return <Shimmer />;
+  if (listOfRestaurants.length === 0) return <Shimmer />;
 
   return (
-    <div className="body">
-      {/* Filters */}
-      <div className="filter flex flex-wrap">
+    /* 🔑 FIX: header fixed hai isliye top padding */
+    <div className="pt-28 px-4 max-w-7xl mx-auto">
+
+      {/* 🔍 Filters */}
+      <div className="flex flex-wrap items-center gap-4 mb-6">
+
         {/* Search */}
-        <div className="search m-4 p-4">
+        <div className="flex gap-2">
           <input
             type="text"
             data-testid="searchInput"
-            className="border border-solid border-black p-2"
+            className="border border-gray-400 px-3 py-2 rounded-md"
             placeholder="Search restaurant..."
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
           <button
-            className="px-4 py-2 bg-green-100 m-2 rounded-lg"
+            className="px-4 py-2 bg-green-500 text-white rounded-md"
             onClick={() => {
               const filtered = listOfRestaurants.filter((res) =>
                 res.name.toLowerCase().includes(searchText.toLowerCase())
@@ -61,34 +61,32 @@ const Body = () => {
           </button>
         </div>
 
-        {/* Top Rated Filter */}
-        <div className="search m-4 p-4 flex items-center">
-          <button
-            className="px-4 py-2 bg-gray-100 rounded-lg"
-            onClick={() => {
-              const filteredList = listOfRestaurants.filter(
-                (res) => res.avgRating > 4
-              );
-              setFilteredRestaurant(filteredList);
-            }}
-          >
-            Top Rated Restaurants
-          </button>
-        </div>
+        {/* Top Rated */}
+        <button
+          className="px-4 py-2 bg-gray-200 rounded-md"
+          onClick={() => {
+            const filteredList = listOfRestaurants.filter(
+              (res) => res.avgRating > 4
+            );
+            setFilteredRestaurant(filteredList);
+          }}
+        >
+          Top Rated Restaurants
+        </button>
 
         {/* Username */}
-        <div className="search m-4 p-4 flex items-center">
-          <label className="mr-2">UserName:</label>
+        <div className="flex items-center gap-2">
+          <label className="font-medium">User:</label>
           <input
-            className="border border-black p-2"
+            className="border border-gray-400 px-2 py-1 rounded-md"
             value={loggedInUser}
             onChange={(e) => setUserName(e.target.value)}
           />
         </div>
       </div>
 
-      {/* Restaurant Cards */}
-      <div className="flex flex-wrap">
+      {/* 🍽 Restaurant Cards */}
+      <div className="flex flex-wrap justify-center">
         {filteredRestaurant.map((restaurant) => (
           <Link
             key={restaurant.id}

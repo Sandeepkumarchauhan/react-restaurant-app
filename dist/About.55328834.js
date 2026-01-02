@@ -207,7 +207,7 @@
       });
     }
   }
-})({"2Eelu":[function(require,module,exports,__globalThis) {
+})({"1aWES":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -803,7 +803,7 @@ exports.default = About;
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./User":"gT672","./UserClass":"dHre4","react":"jMk1U","../utils/UserContext":"8LxkN","@parcel/transformer-js/src/esmodule-helpers.js":"iRL2I","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"cmC7m"}],"gT672":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./User":"gT672","./UserClass":"dHre4","react":"jMk1U","../utils/UserContext":"8LxkN","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"gT672":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$1070 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$1070.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -888,7 +888,7 @@ $RefreshReg$(_c, "User");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"iRL2I","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"cmC7m"}],"dHre4":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dHre4":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$05f4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$05f4.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -1003,6 +1003,6 @@ exports.default = UserClass; /****
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"iRL2I","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"cmC7m"}]},["2Eelu"], null, "parcelRequire94c2", {})
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["1aWES"], null, "parcelRequire94c2", {})
 
 //# sourceMappingURL=About.55328834.js.map

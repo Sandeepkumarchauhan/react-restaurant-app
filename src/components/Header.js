@@ -7,43 +7,52 @@ import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
-
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between items-center bg-pink-100 shadow-lg sm:bg-yellow-50 lg:bg-green-50 fixed top-0 left-0 right-0 z-50 p-4">
-      {/* Logo */}
-      <div className="logo-container">
-        <img className="w-40 sm:w-48 md:w-56" src={LOGO_URL} alt="Logo" />
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-sm shadow-sm border-b">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-[2px]">
+
+        {/* Logo */}
+        <img
+          className="w-24 sm:w-28"
+          src={LOGO_URL}
+          alt="Logo"
+        />
+
+        {/* Navigation */}
+        <nav className="flex items-center gap-4 text-base sm:text-lg text-gray-800">
+
+          <span className="hidden sm:block text-lg">
+            {onlineStatus ? "🟢" : "🔴"}
+          </span>
+
+          <Link className="hover:text-green-600 transition" to="/">Home</Link>
+          <Link className="hover:text-green-600 transition" to="/about">About</Link>
+          <Link className="hover:text-green-600 transition" to="/contact">Contact</Link>
+          <Link className="hover:text-green-600 transition" to="/grocery">Grocery</Link>
+
+          <Link className="hover:text-green-600 transition" to="/cart">
+            Cart ({cartItems.length})
+          </Link>
+
+          <button
+            className="bg-blue-500 text-white px-3 py-[3px] rounded text-sm sm:text-base hover:bg-blue-600"
+            onClick={() =>
+              setBtnNameReact(btnNameReact === "Login" ? "Logout" : "Login")
+            }
+          >
+            {btnNameReact}
+          </button>
+
+          <span className="hidden sm:block text-base">
+            {loggedInUser}
+          </span>
+        </nav>
       </div>
-
-      {/* Navigation */}
-      <nav className="flex items-center gap-4">
-        <span>Online Status: {onlineStatus ? "✅" : "🔴"}</span>
-        <Link className="hover:text-green-700" to="/">Home</Link>
-        <Link className="hover:text-green-700" to="/about">About Us</Link>
-        <Link className="hover:text-green-700" to="/contact">Contact Us</Link>
-        <Link className="hover:text-green-700" to="/grocery">Grocery</Link>
-        <Link className="font-bold text-xl hover:text-green-700" to="/cart">
-          Cart - ({cartItems.length} items)
-        </Link>
-
-        <button
-          className="bg-blue-400 text-white px-3 py-1 rounded-lg"
-          onClick={() =>
-            btnNameReact === "Login"
-              ? setBtnNameReact("Logout")
-              : setBtnNameReact("Login")
-          }
-        >
-          {btnNameReact}
-        </button>
-
-        <span className="ml-2">{loggedInUser}</span>
-      </nav>
-    </div>
+    </header>
   );
 };
 

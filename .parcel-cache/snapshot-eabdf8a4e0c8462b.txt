@@ -1,4 +1,4 @@
-7165
+7167
 103C:\projects\React-Project\node_modules\@babel\plugin-transform-regenerator\lib\regenerator\visit.js.map134118261516228911 0
 86C:\projects\React-Project\node_modules\tailwindcss\types\generated\corePluginList.d.ts134118262710897322 0
 48C:\projects\React-Project\src\utils\cartSlice.js134118035402526860 0
@@ -13,8 +13,8 @@
 70C:\projects\React-Project\node_modules\caniuse-lite\data\regions\VU.js134118260177794772 0
 75C:\projects\React-Project\node_modules\tailwindcss\lib\value-parser\unit.js134118262710672946 0
 73C:\projects\React-Project\node_modules\caniuse-lite\data\features\opus.js134118260175043365 0
-30C:\projects\React-Project\dist134118311392619508 1
-36C:\projects\React-Project\index.html134118273382737249 0
+30C:\projects\React-Project\dist134118359874507310 1
+36C:\projects\React-Project\index.html134118357307293560 0
 85C:\projects\React-Project\node_modules\caniuse-lite\data\features\css-mediaqueries.js134118260170353003 0
 89C:\projects\React-Project\node_modules\@babel\plugin-transform-unicode-property-regex\lib134118261513622706 1
 58C:\projects\React-Project\node_modules\object-hash\LICENSE134118262706137512 0
@@ -74,11 +74,11 @@
 44C:\projects\React-Project\tailwind.config.js134118312766549431 0
 95C:\projects\React-Project\node_modules\@babel\plugin-transform-optional-catch-binding\README.md134118261512439749 0
 86C:\projects\React-Project\node_modules\sucrase\dist\esm\transformers\JSXTransformer.js134118262708874082 0
-36C:\projects\React-Project\src\App.js134118035401127472 0
+36C:\projects\React-Project\src\App.js134118354747356826 0
 63C:\projects\React-Project\src\components\mocks\resCardMock.json134118035402301785 0
 71C:\projects\React-Project\node_modules\eslint-visitor-keys\lib\index.js134118265819668571 0
 80C:\projects\React-Project\node_modules\eslint\lib\rules\no-dupe-class-members.js134118265824235513 0
-38C:\projects\React-Project\src\index.js134118310017182677 0
+38C:\projects\React-Project\src\index.js134118354878660008 0
 82C:\projects\React-Project\node_modules\caniuse-lite\data\features\html5semantic.js134118260172880899 0
 79C:\projects\React-Project\node_modules\eslint\messages\extend-config-missing.js134118265822664764 0
 56C:\projects\React-Project\node_modules\tailwindcss\types134118262710951831 1
@@ -246,7 +246,7 @@
 85C:\projects\React-Project\node_modules\tailwindcss\src\lib\substituteScreenAtRules.js134118262710580442 0
 62C:\projects\React-Project\node_modules\sucrase\register\jsx.js134118262708874082 0
 58C:\projects\React-Project\node_modules\cross-spawn\LICENSE134118265818305784 0
-58C:\projects\React-Project\src\components\RestaurantMenu.js134118302887172502 0
+58C:\projects\React-Project\src\components\RestaurantMenu.js134118359858907499 0
 88C:\projects\React-Project\node_modules\react-dom\cjs\react-dom-server.node.production.js134118262065600116 0
 63C:\projects\React-Project\src\components\mocks\mockResMenu.json134118035402301785 0
 61C:\projects\React-Project\node_modules\js-yaml\lib\snippet.js134118265821506176 0
@@ -1313,7 +1313,7 @@
 83C:\projects\React-Project\node_modules\tailwindcss\src\util\removeAlphaVariables.js134118262710183532 0
 77C:\projects\React-Project\node_modules\caniuse-lite\data\features\jpeg2000.js134118260173541705 0
 76C:\projects\React-Project\node_modules\tailwindcss\scripts\generate-types.js134118262709065760 0
-41C:\projects\React-Project\dist\index.html134118304082704334 0
+41C:\projects\React-Project\dist\index.html134118357433006360 0
 80C:\projects\React-Project\node_modules\sucrase\dist\esm\util\isAsyncOperation.js134118262708805075 0
 56C:\projects\React-Project\node_modules\eslint\lib\api.js134118265820159466 0
 55C:\projects\React-Project\node_modules\redux-thunk\dist134118274116430086 1
@@ -4900,6 +4900,7 @@
 83C:\projects\React-Project\node_modules\@babel\plugin-transform-regexp-modifiers\lib134118261513628184 1
 55C:\projects\React-Project\node_modules\chokidar\LICENSE134118262706155191 0
 60C:\projects\React-Project\node_modules\chokidar\node_modules134118262704670269 1
+57C:\projects\React-Project\dist\React-Project.aa436662.css134118359874370856 0
 60C:\projects\React-Project\node_modules\chokidar\package.json134118262707066587 0
 53C:\projects\React-Project\node_modules\chokidar\types134118262707221341 1
 72C:\projects\React-Project\node_modules\chokidar\node_modules\glob-parent134118262706795545 1
@@ -7162,5 +7163,6 @@
 56C:\projects\React-Project\node_modules\.bin\tailwind.cmd134118262711160146 0
 66C:\projects\React-Project\node_modules\.bin\update-browserslist-db134118260179202469 0
 70C:\projects\React-Project\node_modules\.bin\update-browserslist-db.ps1134118260179197093 0
-56C:\projects\React-Project\dist\React-Project.2c54e4d8.js134118311392503995 0
-60C:\projects\React-Project\dist\React-Project.2c54e4d8.js.map134118311392619508 0
+56C:\projects\React-Project\dist\React-Project.2c54e4d8.js134118359874386567 0
+60C:\projects\React-Project\dist\React-Project.2c54e4d8.js.map134118359874487331 0
+61C:\projects\React-Project\dist\React-Project.aa436662.css.map134118359874396692 0

@@ -13,7 +13,7 @@
 70C:\projects\React-Project\node_modules\caniuse-lite\data\regions\VU.js134118260177794772 0
 75C:\projects\React-Project\node_modules\tailwindcss\lib\value-parser\unit.js134118262710672946 0
 73C:\projects\React-Project\node_modules\caniuse-lite\data\features\opus.js134118260175043365 0
-30C:\projects\React-Project\dist134118359874507310 1
+30C:\projects\React-Project\dist134118383790179633 1
 36C:\projects\React-Project\index.html134118357307293560 0
 85C:\projects\React-Project\node_modules\caniuse-lite\data\features\css-mediaqueries.js134118260170353003 0
 89C:\projects\React-Project\node_modules\@babel\plugin-transform-unicode-property-regex\lib134118261513622706 1
@@ -103,7 +103,7 @@
 73C:\projects\React-Project\node_modules\@babel\template\lib\options.js.map134118261515640752 0
 65C:\projects\React-Project\src\components\__tests__\Search.test.js134118035402049629 0
 101C:\projects\React-Project\node_modules\@babel\helper-create-class-features-plugin\node_modules\semver134118261514847701 1
-42C:\projects\React-Project\src\utils\Api.js134118297108610380 0
+42C:\projects\React-Project\src\utils\Api.js134118381804037248 0
 47C:\projects\React-Project\src\utils\appStore.js134118035402484394 0
 60C:\projects\React-Project\node_modules\react-router-dom\dist134118262212666068 1
 76C:\projects\React-Project\node_modules\sucrase\dist\util\isAsyncOperation.js134118262708805075 0
@@ -230,9 +230,9 @@
 73C:\projects\React-Project\node_modules\eslint\lib\eslint\legacy-eslint.js134118265823599922 0
 67C:\projects\React-Project\node_modules\@nodelib\fs.walk\out\readers134118262707894525 1
 46C:\projects\React-Project\src\components\mocks134118263143100555 1
-58C:\projects\React-Project\src\components\RestaurantCard.js134118311385045298 0
+58C:\projects\React-Project\src\components\RestaurantCard.js134118377733624399 0
 66C:\projects\React-Project\node_modules\sucrase\dist\esm\Options.js134118262709065760 0
-62C:\projects\React-Project\src\components\RestaurantCategory.js134118299203637090 0
+62C:\projects\React-Project\src\components\RestaurantCategory.js134118383787282886 0
 72C:\projects\React-Project\node_modules\fast-glob\out\providers\stream.js134118262707854994 0
 84C:\projects\React-Project\node_modules\tailwindcss\lib\lib\resolveDefaultsAtRules.js134118262710403735 0
 64C:\projects\React-Project\node_modules\fast-glob\out\settings.js134118262707814282 0
@@ -246,7 +246,7 @@
 85C:\projects\React-Project\node_modules\tailwindcss\src\lib\substituteScreenAtRules.js134118262710580442 0
 62C:\projects\React-Project\node_modules\sucrase\register\jsx.js134118262708874082 0
 58C:\projects\React-Project\node_modules\cross-spawn\LICENSE134118265818305784 0
-58C:\projects\React-Project\src\components\RestaurantMenu.js134118359858907499 0
+58C:\projects\React-Project\src\components\RestaurantMenu.js134118381416842473 0
 88C:\projects\React-Project\node_modules\react-dom\cjs\react-dom-server.node.production.js134118262065600116 0
 63C:\projects\React-Project\src\components\mocks\mockResMenu.json134118035402301785 0
 61C:\projects\React-Project\node_modules\js-yaml\lib\snippet.js134118265821506176 0
@@ -1313,7 +1313,7 @@
 83C:\projects\React-Project\node_modules\tailwindcss\src\util\removeAlphaVariables.js134118262710183532 0
 77C:\projects\React-Project\node_modules\caniuse-lite\data\features\jpeg2000.js134118260173541705 0
 76C:\projects\React-Project\node_modules\tailwindcss\scripts\generate-types.js134118262709065760 0
-41C:\projects\React-Project\dist\index.html134118357433006360 0
+41C:\projects\React-Project\dist\index.html134118383789101627 0
 80C:\projects\React-Project\node_modules\sucrase\dist\esm\util\isAsyncOperation.js134118262708805075 0
 56C:\projects\React-Project\node_modules\eslint\lib\api.js134118265820159466 0
 55C:\projects\React-Project\node_modules\redux-thunk\dist134118274116430086 1
@@ -1909,7 +1909,7 @@
 76C:\projects\React-Project\node_modules\tailwindcss\lib\value-parser\parse.js134118262709851097 0
 68C:\projects\React-Project\node_modules\caniuse-lite\data\features.js134118260171997058 0
 75C:\projects\React-Project\node_modules\react-redux\src\hooks\useSelector.ts134118273677964593 0
-48C:\projects\React-Project\dist\About.55328834.js134118304083649111 0
+48C:\projects\React-Project\dist\About.55328834.js134118383789902902 0
 81C:\projects\React-Project\node_modules\@babel\preset-env\data\built-in-modules.js134118261513943314 0
 70C:\projects\React-Project\node_modules\caniuse-lite\data\regions\MN.js134118260174459436 0
 89C:\projects\React-Project\node_modules\caniuse-lite\data\features\css-overflow-overlay.js134118260170388092 0
@@ -2154,7 +2154,7 @@
 72C:\projects\React-Project\node_modules\sucrase\dist\util\getClassInfo.js134118262708277413 0
 87C:\projects\React-Project\node_modules\regenerate-unicode-properties\Script\Javanese.js134118261519407674 0
 77C:\projects\React-Project\node_modules\reselect\dist\reselect.browser.mjs.map134118274116365601 0
-54C:\projects\React-Project\dist\Grocery.390591cb.js.map134118304082823941 0
+54C:\projects\React-Project\dist\Grocery.390591cb.js.map134118383789191656 0
 58C:\projects\React-Project\node_modules\react-dom\server.js134118262065725000 0
 86C:\projects\React-Project\node_modules\@babel\preset-env\node_modules\semver\range.bnf134118261512491587 0
 88C:\projects\React-Project\node_modules\sucrase\dist\util\getImportExportSpecifierInfo.js134118262708399577 0
@@ -2743,7 +2743,7 @@
 61C:\projects\React-Project\node_modules\resolve\lib\is-core.js134118261517746286 0
 58C:\projects\React-Project\node_modules\fast-glob\out\utils134118262708526413 1
 90C:\projects\React-Project\node_modules\caniuse-lite\data\features\css-text-wrap-balance.js134118260170930265 0
-50C:\projects\React-Project\dist\Grocery.390591cb.js134118304082763629 0
+50C:\projects\React-Project\dist\Grocery.390591cb.js134118383789113902 0
 70C:\projects\React-Project\node_modules\caniuse-lite\data\regions\TW.js134118260177429240 0
 68C:\projects\React-Project\node_modules\react-router-dom\package.json134118262212830422 0
 73C:\projects\React-Project\node_modules\reselect\dist\reselect.browser.mjs134118274116603364 0
@@ -3920,7 +3920,7 @@
 70C:\projects\React-Project\node_modules\caniuse-lite\data\regions\MC.js134118260174176150 0
 82C:\projects\React-Project\node_modules\caniuse-lite\data\features\text-overflow.js134118260177028734 0
 58C:\projects\React-Project\node_modules\locate-path\license134118265818217497 0
-52C:\projects\React-Project\dist\About.55328834.js.map134118304083776136 0
+52C:\projects\React-Project\dist\About.55328834.js.map134118383789902902 0
 63C:\projects\React-Project\node_modules\locate-path\package.json134118265818945797 0
 63C:\projects\React-Project\node_modules\cross-spawn\lib\parse.js134118265819615459 0
 62C:\projects\React-Project\node_modules\lines-and-columns\build134118262706795545 1
@@ -4900,7 +4900,7 @@
 83C:\projects\React-Project\node_modules\@babel\plugin-transform-regexp-modifiers\lib134118261513628184 1
 55C:\projects\React-Project\node_modules\chokidar\LICENSE134118262706155191 0
 60C:\projects\React-Project\node_modules\chokidar\node_modules134118262704670269 1
-57C:\projects\React-Project\dist\React-Project.aa436662.css134118359874370856 0
+57C:\projects\React-Project\dist\React-Project.aa436662.css134118383789134032 0
 60C:\projects\React-Project\node_modules\chokidar\package.json134118262707066587 0
 53C:\projects\React-Project\node_modules\chokidar\types134118262707221341 1
 72C:\projects\React-Project\node_modules\chokidar\node_modules\glob-parent134118262706795545 1
@@ -7163,6 +7163,6 @@
 56C:\projects\React-Project\node_modules\.bin\tailwind.cmd134118262711160146 0
 66C:\projects\React-Project\node_modules\.bin\update-browserslist-db134118260179202469 0
 70C:\projects\React-Project\node_modules\.bin\update-browserslist-db.ps1134118260179197093 0
-56C:\projects\React-Project\dist\React-Project.2c54e4d8.js134118359874386567 0
-60C:\projects\React-Project\dist\React-Project.2c54e4d8.js.map134118359874487331 0
-61C:\projects\React-Project\dist\React-Project.aa436662.css.map134118359874396692 0
+56C:\projects\React-Project\dist\React-Project.2c54e4d8.js134118383790042616 0
+60C:\projects\React-Project\dist\React-Project.2c54e4d8.js.map134118383790141526 0
+61C:\projects\React-Project\dist\React-Project.aa436662.css.map134118383789211731 0

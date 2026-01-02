@@ -28555,17 +28555,17 @@ var _s = $RefreshSig$();
 const RestaurantCard = ({ resData })=>{
     _s();
     const { loggedInUser } = (0, _react.useContext)((0, _userContextDefault.default));
-    const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, deliveryTime } = resData;
+    const { cloudinaryImageId, name, avgRating, cuisines, price, deliveryTime, image } = resData;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "relative m-4 p-4 w-full sm:w-[250px] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-200",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "w-full h-40 object-cover rounded-lg",
                 alt: "res-logo",
-                src: (0, _constants.CDN_URL) + cloudinaryImageId
+                src: image
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -28573,7 +28573,7 @@ const RestaurantCard = ({ resData })=>{
                 children: name || "Restaurant"
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28581,7 +28581,7 @@ const RestaurantCard = ({ resData })=>{
                 children: Array.isArray(cuisines) ? cuisines.join(", ") : "Various Cuisines"
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28594,24 +28594,23 @@ const RestaurantCard = ({ resData })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 34,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: [
-                            "\u20B9",
-                            costForTwo ? costForTwo / 100 : "N/A",
+                            price,
                             " FOR TWO"
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestaurantCard.js",
-                        lineNumber: 35,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28623,7 +28622,7 @@ const RestaurantCard = ({ resData })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 37,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28634,13 +28633,13 @@ const RestaurantCard = ({ resData })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 40,
+                lineNumber: 41,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantCard.js",
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 5
     }, undefined);
 };
@@ -28656,20 +28655,20 @@ const withPromtedLabel = (RestaurantCard)=>{
                     children: "Promoted"
                 }, void 0, false, {
                     fileName: "src/components/RestaurantCard.js",
-                    lineNumber: 50,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
                     ...props
                 }, void 0, false, {
                     fileName: "src/components/RestaurantCard.js",
-                    lineNumber: 53,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/RestaurantCard.js",
-            lineNumber: 49,
+            lineNumber: 50,
             columnNumber: 7
         }, undefined);
     };
@@ -28846,319 +28845,851 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const restaurants = [
     {
-        "id": 1,
-        "name": "Pizza Palace",
-        "avgRating": 4.5,
-        "deliveryTime": "30 mins",
-        "offer": "20% off",
-        "price": "$15",
-        "image": "https://picsum.photos/200/150?random=1",
-        "menu": {
-            "Main": [
+        id: 1,
+        name: "Pizza Palace",
+        cuisines: [
+            "Italian",
+            "Pizza"
+        ],
+        avgRating: 4.5,
+        deliveryTime: 30,
+        offer: "20% off",
+        price: "\u20B91200",
+        image: "https://media.istockphoto.com/id/1198079266/photo/deluxe-pizza-with-pepperoni-sausage-mushrooms-and-peppers.webp?a=1&b=1&s=612x612&w=0&k=20&c=iIn_o7pSEgDcchNgU6axDJvHkZessshM9vB_IVECx1k=",
+        menu: {
+            Recommended: [
                 {
-                    "name": "Margherita Pizza",
-                    "price": "$10",
-                    "offer": "10% off",
-                    "avgRating": 4.6
-                },
-                {
-                    "name": "Pepperoni Pizza",
-                    "price": "$12",
-                    "offer": "5% off",
-                    "avgRating": 4.5
+                    name: "Margherita Pizza",
+                    price: "\u20B9800",
+                    avgRating: 4.6,
+                    image: "https://media.istockphoto.com/id/1400137973/photo/pizza-chef-serving-freshly-baked-pizza.webp?a=1&b=1&s=612x612&w=0&k=20&c=l86glbhCg2_dxv6UihEwWPo8D1T9jZo4Cu6FzmRgKF0="
                 }
             ],
-            "Dessert": [
+            Drinks: [
                 {
-                    "name": "Chocolate Brownie",
-                    "price": "$5",
-                    "offer": "Buy 1 Get 1",
-                    "avgRating": 4.7
-                },
-                {
-                    "name": "Ice Cream",
-                    "price": "$4",
-                    "offer": "Free Topping",
-                    "avgRating": 4.6
+                    name: "Coke",
+                    price: "\u20B9160",
+                    avgRating: 4.4
                 }
             ],
-            "Drinks": [
+            "Our Special": [
                 {
-                    "name": "Coca Cola",
-                    "price": "$2",
-                    "offer": "Free Ice",
-                    "avgRating": 4.4
-                },
-                {
-                    "name": "Orange Juice",
-                    "price": "$3",
-                    "offer": "5% off",
-                    "avgRating": 4.5
+                    name: "Cheese Burst Pizza",
+                    price: "\u20B91100",
+                    avgRating: 4.7
                 }
             ]
         }
     },
     {
-        "id": 2,
-        "name": "Burger Bonanza",
-        "avgRating": 4.2,
-        "deliveryTime": "25 mins",
-        "offer": "10% off",
-        "price": "$12",
-        "image": "https://picsum.photos/200/150?random=2",
-        "menu": {
-            "Main": [
+        id: 2,
+        name: "Burger Bonanza",
+        cuisines: [
+            "American",
+            "Burgers"
+        ],
+        avgRating: 4.2,
+        deliveryTime: 25,
+        offer: "10% off",
+        price: "\u20B9960",
+        image: "https://picsum.photos/200/150?random=2",
+        menu: {
+            Recommended: [
                 {
-                    "name": "Cheeseburger",
-                    "price": "$8",
-                    "offer": "5% off",
-                    "avgRating": 4.3
-                },
-                {
-                    "name": "Double Burger",
-                    "price": "$10",
-                    "offer": "10% off",
-                    "avgRating": 4.4
+                    name: "Cheese Burger",
+                    price: "\u20B9640",
+                    avgRating: 4.3
                 }
             ],
-            "Dessert": [
+            Drinks: [
                 {
-                    "name": "Chocolate Muffin",
-                    "price": "$3",
-                    "offer": "Free Drink",
-                    "avgRating": 4.5
-                },
-                {
-                    "name": "Donut",
-                    "price": "$2",
-                    "offer": "5% off",
-                    "avgRating": 4.3
+                    name: "Pepsi",
+                    price: "\u20B9160",
+                    avgRating: 4.2
                 }
             ],
-            "Drinks": [
+            "Our Special": [
                 {
-                    "name": "Pepsi",
-                    "price": "$2",
-                    "offer": "Free Ice",
-                    "avgRating": 4.2
-                },
-                {
-                    "name": "Lemonade",
-                    "price": "$3",
-                    "offer": "5% off",
-                    "avgRating": 4.4
+                    name: "BBQ Burger",
+                    price: "\u20B9880",
+                    avgRating: 4.5
                 }
             ]
         }
     },
     {
-        "id": 3,
-        "name": "Sushi World",
-        "avgRating": 4.7,
-        "deliveryTime": "40 mins",
-        "offer": "15% off",
-        "price": "$20",
-        "image": "https://picsum.photos/200/150?random=3",
-        "menu": {
-            "Main": [
+        id: 3,
+        name: "Sushi World",
+        cuisines: [
+            "Japanese",
+            "Sushi"
+        ],
+        avgRating: 4.7,
+        deliveryTime: 40,
+        offer: "15% off",
+        price: "\u20B91600",
+        image: "https://picsum.photos/200/150?random=3",
+        menu: {
+            Recommended: [
                 {
-                    "name": "Salmon Sushi",
-                    "price": "$12",
-                    "offer": "10% off",
-                    "avgRating": 4.8
-                },
-                {
-                    "name": "Tuna Roll",
-                    "price": "$10",
-                    "offer": "5% off",
-                    "avgRating": 4.7
+                    name: "Salmon Sushi",
+                    price: "\u20B9960",
+                    avgRating: 4.8
                 }
             ],
-            "Dessert": [
+            Drinks: [
                 {
-                    "name": "Mochi",
-                    "price": "$5",
-                    "offer": "Free Drink",
-                    "avgRating": 4.6
-                },
-                {
-                    "name": "Green Tea Ice Cream",
-                    "price": "$4",
-                    "offer": "5% off",
-                    "avgRating": 4.7
+                    name: "Green Tea",
+                    price: "\u20B9200",
+                    avgRating: 4.5
                 }
             ],
-            "Drinks": [
+            "Our Special": [
                 {
-                    "name": "Green Tea",
-                    "price": "$3",
-                    "offer": "Free Refill",
-                    "avgRating": 4.5
-                },
-                {
-                    "name": "Sake",
-                    "price": "$6",
-                    "offer": "10% off",
-                    "avgRating": 4.6
+                    name: "Dragon Roll",
+                    price: "\u20B91200",
+                    avgRating: 4.9
                 }
             ]
         }
     },
     {
-        "id": 4,
-        "name": "Taco Town",
-        "avgRating": 4.3,
-        "deliveryTime": "20 mins",
-        "offer": "5% off",
-        "price": "$10",
-        "image": "https://picsum.photos/200/150?random=4",
-        "menu": {
-            "Main": [
+        id: 4,
+        name: "Taco Town",
+        cuisines: [
+            "Mexican"
+        ],
+        avgRating: 4.3,
+        deliveryTime: 20,
+        offer: "5% off",
+        price: "\u20B9800",
+        image: "https://picsum.photos/200/150?random=4",
+        menu: {
+            Recommended: [
                 {
-                    "name": "Chicken Taco",
-                    "price": "$5",
-                    "offer": "5% off",
-                    "avgRating": 4.2
-                },
-                {
-                    "name": "Beef Taco",
-                    "price": "$6",
-                    "offer": "5% off",
-                    "avgRating": 4.3
+                    name: "Chicken Taco",
+                    price: "\u20B9400",
+                    avgRating: 4.2
                 }
             ],
-            "Dessert": [
+            Drinks: [
                 {
-                    "name": "Churros",
-                    "price": "$3",
-                    "offer": "Buy 1 Get 1",
-                    "avgRating": 4.4
-                },
-                {
-                    "name": "Flan",
-                    "price": "$2",
-                    "offer": "Free Drink",
-                    "avgRating": 4.5
+                    name: "Lime Soda",
+                    price: "\u20B9140",
+                    avgRating: 4.1
                 }
             ],
-            "Drinks": [
+            "Our Special": [
                 {
-                    "name": "Margarita",
-                    "price": "$4",
-                    "offer": "10% off",
-                    "avgRating": 4.6
-                },
-                {
-                    "name": "Soda",
-                    "price": "$2",
-                    "offer": "Free Ice",
-                    "avgRating": 4.3
+                    name: "Loaded Nachos",
+                    price: "\u20B9520",
+                    avgRating: 4.5
                 }
             ]
         }
     },
     {
-        "id": 5,
-        "name": "Pasta Point",
-        "avgRating": 4.4,
-        "deliveryTime": "35 mins",
-        "offer": "Free Drink",
-        "price": "$18",
-        "image": "https://picsum.photos/200/150?random=5",
-        "menu": {
-            "Main": [
+        id: 5,
+        name: "Spice Villa",
+        cuisines: [
+            "Indian"
+        ],
+        avgRating: 4.5,
+        deliveryTime: 28,
+        offer: "\u20B9150 off",
+        price: "\u20B9720",
+        image: "https://picsum.photos/200/150?random=5",
+        menu: {
+            Recommended: [
                 {
-                    "name": "Spaghetti",
-                    "price": "$10",
-                    "offer": "10% off",
-                    "avgRating": 4.5
-                },
-                {
-                    "name": "Lasagna",
-                    "price": "$12",
-                    "offer": "Free Drink",
-                    "avgRating": 4.6
+                    name: "Paneer Butter Masala",
+                    price: "\u20B9480",
+                    avgRating: 4.6
                 }
             ],
-            "Dessert": [
+            Drinks: [
                 {
-                    "name": "Tiramisu",
-                    "price": "$6",
-                    "offer": "5% off",
-                    "avgRating": 4.7
-                },
-                {
-                    "name": "Panna Cotta",
-                    "price": "$5",
-                    "offer": "Free Coffee",
-                    "avgRating": 4.6
+                    name: "Lassi",
+                    price: "\u20B9120",
+                    avgRating: 4.6
                 }
             ],
-            "Drinks": [
+            "Our Special": [
                 {
-                    "name": "Wine",
-                    "price": "$8",
-                    "offer": "10% off",
-                    "avgRating": 4.5
-                },
+                    name: "Veg Thali",
+                    price: "\u20B9420",
+                    avgRating: 4.7
+                }
+            ]
+        }
+    },
+    /* --------- SAME PATTERN CONTINUES --------- */ {
+        id: 6,
+        name: "Biryani Hub",
+        cuisines: [
+            "Biryani"
+        ],
+        avgRating: 4.6,
+        deliveryTime: 35,
+        offer: "20% off",
+        price: "\u20B9900",
+        image: "https://picsum.photos/200/150?random=6",
+        menu: {
+            Recommended: [
                 {
-                    "name": "Lemonade",
-                    "price": "$3",
-                    "offer": "Free Ice",
-                    "avgRating": 4.4
+                    name: "Chicken Biryani",
+                    price: "\u20B9360",
+                    avgRating: 4.7
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Buttermilk",
+                    price: "\u20B980",
+                    avgRating: 4.4
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Dum Biryani",
+                    price: "\u20B9420",
+                    avgRating: 4.8
                 }
             ]
         }
     },
     {
-        "id": 6,
-        "name": "Grill House",
-        "avgRating": 4.6,
-        "deliveryTime": "30 mins",
-        "offer": "20% off",
-        "price": "$16",
-        "image": "https://picsum.photos/200/150?random=6",
-        "menu": {
-            "Main": [
+        id: 7,
+        name: "Wok Express",
+        cuisines: [
+            "Chinese"
+        ],
+        avgRating: 4.1,
+        deliveryTime: 32,
+        offer: "10% off",
+        price: "\u20B9880",
+        image: "https://picsum.photos/200/150?random=7",
+        menu: {
+            Recommended: [
                 {
-                    "name": "Grilled Chicken",
-                    "price": "$12",
-                    "offer": "10% off",
-                    "avgRating": 4.7
-                },
-                {
-                    "name": "Steak",
-                    "price": "$15",
-                    "offer": "Free Drink",
-                    "avgRating": 4.6
+                    name: "Hakka Noodles",
+                    price: "\u20B9320",
+                    avgRating: 4.2
                 }
             ],
-            "Dessert": [
+            Drinks: [
                 {
-                    "name": "Cheesecake",
-                    "price": "$5",
-                    "offer": "5% off",
-                    "avgRating": 4.5
-                },
-                {
-                    "name": "Brownie",
-                    "price": "$4",
-                    "offer": "Free Ice Cream",
-                    "avgRating": 4.6
+                    name: "Ice Tea",
+                    price: "\u20B9140",
+                    avgRating: 4.2
                 }
             ],
-            "Drinks": [
+            "Our Special": [
                 {
-                    "name": "Beer",
-                    "price": "$6",
-                    "offer": "10% off",
-                    "avgRating": 4.5
-                },
+                    name: "Chilli Noodles",
+                    price: "\u20B9380",
+                    avgRating: 4.5
+                }
+            ]
+        }
+    },
+    /* IDs 8 to 24 – SAME STRUCTURE (SAFE) */ {
+        id: 8,
+        name: "Food Junction",
+        cuisines: [
+            "Multi Cuisine"
+        ],
+        avgRating: 4.3,
+        deliveryTime: 26,
+        offer: "Special Offer",
+        price: "\u20B9750",
+        image: "https://picsum.photos/200/150?random=8",
+        menu: {
+            Recommended: [
                 {
-                    "name": "Soda",
-                    "price": "$3",
-                    "offer": "Free Ice",
-                    "avgRating": 4.4
+                    name: "Combo Meal",
+                    price: "\u20B9350",
+                    avgRating: 4.4
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Cold Drink",
+                    price: "\u20B9120",
+                    avgRating: 4.3
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "House Special",
+                    price: "\u20B9480",
+                    avgRating: 4.6
+                }
+            ]
+        }
+    },
+    {
+        id: 9,
+        name: "Punjabi Tadka",
+        cuisines: [
+            "Punjabi",
+            "Indian"
+        ],
+        avgRating: 4.4,
+        deliveryTime: 29,
+        offer: "\u20B9100 off",
+        price: "\u20B9700",
+        image: "https://picsum.photos/200/150?random=9",
+        menu: {
+            Recommended: [
+                {
+                    name: "Chole Bhature",
+                    price: "\u20B9220",
+                    avgRating: 4.5
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Sweet Lassi",
+                    price: "\u20B9120",
+                    avgRating: 4.6
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Punjabi Thali",
+                    price: "\u20B9380",
+                    avgRating: 4.7
+                }
+            ]
+        }
+    },
+    {
+        id: 10,
+        name: "South Spice",
+        cuisines: [
+            "South Indian"
+        ],
+        avgRating: 4.6,
+        deliveryTime: 24,
+        offer: "Free Filter Coffee",
+        price: "\u20B9650",
+        image: "https://picsum.photos/200/150?random=10",
+        menu: {
+            Recommended: [
+                {
+                    name: "Masala Dosa",
+                    price: "\u20B9180",
+                    avgRating: 4.7
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Filter Coffee",
+                    price: "\u20B990",
+                    avgRating: 4.6
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "South Indian Thali",
+                    price: "\u20B9320",
+                    avgRating: 4.8
+                }
+            ]
+        }
+    },
+    {
+        id: 11,
+        name: "Kebab Kingdom",
+        cuisines: [
+            "Mughlai",
+            "Kebab"
+        ],
+        avgRating: 4.5,
+        deliveryTime: 34,
+        offer: "15% off",
+        price: "\u20B9950",
+        image: "https://picsum.photos/200/150?random=11",
+        menu: {
+            Recommended: [
+                {
+                    name: "Chicken Seekh Kebab",
+                    price: "\u20B9320",
+                    avgRating: 4.6
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Mint Cooler",
+                    price: "\u20B9140",
+                    avgRating: 4.4
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Kebab Platter",
+                    price: "\u20B9520",
+                    avgRating: 4.7
+                }
+            ]
+        }
+    },
+    {
+        id: 12,
+        name: "Cafe Brew",
+        cuisines: [
+            "Cafe",
+            "Snacks"
+        ],
+        avgRating: 4.3,
+        deliveryTime: 22,
+        offer: "Buy 1 Get 1",
+        price: "\u20B9600",
+        image: "https://picsum.photos/200/150?random=12",
+        menu: {
+            Recommended: [
+                {
+                    name: "Veg Sandwich",
+                    price: "\u20B9160",
+                    avgRating: 4.3
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Cold Coffee",
+                    price: "\u20B9180",
+                    avgRating: 4.5
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Cheese Loaded Fries",
+                    price: "\u20B9260",
+                    avgRating: 4.6
+                }
+            ]
+        }
+    },
+    {
+        id: 13,
+        name: "Roll Nation",
+        cuisines: [
+            "Rolls",
+            "Fast Food"
+        ],
+        avgRating: 4.2,
+        deliveryTime: 21,
+        offer: "10% off",
+        price: "\u20B9580",
+        image: "https://picsum.photos/200/150?random=13",
+        menu: {
+            Recommended: [
+                {
+                    name: "Paneer Roll",
+                    price: "\u20B9180",
+                    avgRating: 4.3
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Lemon Soda",
+                    price: "\u20B9100",
+                    avgRating: 4.2
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Loaded Cheese Roll",
+                    price: "\u20B9240",
+                    avgRating: 4.5
+                }
+            ]
+        }
+    },
+    {
+        id: 14,
+        name: "The Chinese Wok",
+        cuisines: [
+            "Chinese"
+        ],
+        avgRating: 4.1,
+        deliveryTime: 31,
+        offer: "\u20B980 off",
+        price: "\u20B9820",
+        image: "https://picsum.photos/200/150?random=14",
+        menu: {
+            Recommended: [
+                {
+                    name: "Veg Fried Rice",
+                    price: "\u20B9220",
+                    avgRating: 4.2
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Ice Tea",
+                    price: "\u20B9120",
+                    avgRating: 4.1
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Schezwan Combo",
+                    price: "\u20B9340",
+                    avgRating: 4.4
+                }
+            ]
+        }
+    },
+    {
+        id: 15,
+        name: "Healthy Bowl",
+        cuisines: [
+            "Healthy",
+            "Salads"
+        ],
+        avgRating: 4.6,
+        deliveryTime: 19,
+        offer: "Free Juice",
+        price: "\u20B9640",
+        image: "https://picsum.photos/200/150?random=15",
+        menu: {
+            Recommended: [
+                {
+                    name: "Quinoa Salad",
+                    price: "\u20B9260",
+                    avgRating: 4.6
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Detox Juice",
+                    price: "\u20B9160",
+                    avgRating: 4.5
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Protein Power Bowl",
+                    price: "\u20B9360",
+                    avgRating: 4.7
+                }
+            ]
+        }
+    },
+    {
+        id: 16,
+        name: "Sweet Tooth",
+        cuisines: [
+            "Desserts"
+        ],
+        avgRating: 4.8,
+        deliveryTime: 18,
+        offer: "Buy 1 Get 1",
+        price: "\u20B9520",
+        image: "https://picsum.photos/200/150?random=16",
+        menu: {
+            Recommended: [
+                {
+                    name: "Chocolate Pastry",
+                    price: "\u20B9140",
+                    avgRating: 4.7
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Hot Chocolate",
+                    price: "\u20B9160",
+                    avgRating: 4.8
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Belgian Waffle",
+                    price: "\u20B9260",
+                    avgRating: 4.9
+                }
+            ]
+        }
+    },
+    {
+        id: 17,
+        name: "Seafood Shack",
+        cuisines: [
+            "Seafood"
+        ],
+        avgRating: 4.5,
+        deliveryTime: 38,
+        offer: "20% off",
+        price: "\u20B91100",
+        image: "https://picsum.photos/200/150?random=17",
+        menu: {
+            Recommended: [
+                {
+                    name: "Fish Fry",
+                    price: "\u20B9420",
+                    avgRating: 4.6
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Lime Water",
+                    price: "\u20B9120",
+                    avgRating: 4.3
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Grilled Prawns",
+                    price: "\u20B9620",
+                    avgRating: 4.7
+                }
+            ]
+        }
+    },
+    {
+        id: 18,
+        name: "The Breakfast Club",
+        cuisines: [
+            "Breakfast"
+        ],
+        avgRating: 4.4,
+        deliveryTime: 20,
+        offer: "Morning Special",
+        price: "\u20B9500",
+        image: "https://picsum.photos/200/150?random=18",
+        menu: {
+            Recommended: [
+                {
+                    name: "Aloo Paratha",
+                    price: "\u20B9160",
+                    avgRating: 4.5
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Tea",
+                    price: "\u20B960",
+                    avgRating: 4.4
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Breakfast Combo",
+                    price: "\u20B9260",
+                    avgRating: 4.6
+                }
+            ]
+        }
+    },
+    {
+        id: 19,
+        name: "Italian Oven",
+        cuisines: [
+            "Italian"
+        ],
+        avgRating: 4.5,
+        deliveryTime: 33,
+        offer: "15% off",
+        price: "\u20B91300",
+        image: "https://picsum.photos/200/150?random=19",
+        menu: {
+            Recommended: [
+                {
+                    name: "Penne Alfredo",
+                    price: "\u20B9420",
+                    avgRating: 4.5
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Iced Tea",
+                    price: "\u20B9160",
+                    avgRating: 4.4
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Wood Fired Pizza",
+                    price: "\u20B9620",
+                    avgRating: 4.7
+                }
+            ]
+        }
+    },
+    {
+        id: 20,
+        name: "Street Bites",
+        cuisines: [
+            "Street Food"
+        ],
+        avgRating: 4.3,
+        deliveryTime: 17,
+        offer: "\u20B950 off",
+        price: "\u20B9480",
+        image: "https://picsum.photos/200/150?random=20",
+        menu: {
+            Recommended: [
+                {
+                    name: "Pav Bhaji",
+                    price: "\u20B9180",
+                    avgRating: 4.4
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Masala Soda",
+                    price: "\u20B980",
+                    avgRating: 4.2
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Street Food Combo",
+                    price: "\u20B9260",
+                    avgRating: 4.5
+                }
+            ]
+        }
+    },
+    {
+        id: 21,
+        name: "Arabian Nights",
+        cuisines: [
+            "Middle Eastern"
+        ],
+        avgRating: 4.6,
+        deliveryTime: 36,
+        offer: "20% off",
+        price: "\u20B91400",
+        image: "https://picsum.photos/200/150?random=21",
+        menu: {
+            Recommended: [
+                {
+                    name: "Chicken Shawarma",
+                    price: "\u20B9320",
+                    avgRating: 4.6
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Mint Lemonade",
+                    price: "\u20B9160",
+                    avgRating: 4.5
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Arabian Platter",
+                    price: "\u20B9560",
+                    avgRating: 4.8
+                }
+            ]
+        }
+    },
+    {
+        id: 22,
+        name: "Cloud Kitchen",
+        cuisines: [
+            "Fusion"
+        ],
+        avgRating: 4.2,
+        deliveryTime: 27,
+        offer: "Free Dessert",
+        price: "\u20B9760",
+        image: "https://picsum.photos/200/150?random=22",
+        menu: {
+            Recommended: [
+                {
+                    name: "Fusion Pasta",
+                    price: "\u20B9340",
+                    avgRating: 4.3
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Fruit Punch",
+                    price: "\u20B9140",
+                    avgRating: 4.2
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Chef Special Bowl",
+                    price: "\u20B9420",
+                    avgRating: 4.5
+                }
+            ]
+        }
+    },
+    {
+        id: 23,
+        name: "BBQ Nation Jr",
+        cuisines: [
+            "BBQ"
+        ],
+        avgRating: 4.7,
+        deliveryTime: 39,
+        offer: "25% off",
+        price: "\u20B91500",
+        image: "https://picsum.photos/200/150?random=23",
+        menu: {
+            Recommended: [
+                {
+                    name: "BBQ Chicken Wings",
+                    price: "\u20B9480",
+                    avgRating: 4.7
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Cold Beer",
+                    price: "\u20B9220",
+                    avgRating: 4.6
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "BBQ Feast Platter",
+                    price: "\u20B9720",
+                    avgRating: 4.8
+                }
+            ]
+        }
+    },
+    {
+        id: 24,
+        name: "Midnight Meals",
+        cuisines: [
+            "Fast Food",
+            "Snacks"
+        ],
+        avgRating: 4.1,
+        deliveryTime: 45,
+        offer: "Late Night Deal",
+        price: "\u20B9680",
+        image: "https://picsum.photos/200/150?random=24",
+        menu: {
+            Recommended: [
+                {
+                    name: "Cheese Maggi",
+                    price: "\u20B9160",
+                    avgRating: 4.2
+                }
+            ],
+            Drinks: [
+                {
+                    name: "Energy Drink",
+                    price: "\u20B9180",
+                    avgRating: 4.1
+                }
+            ],
+            "Our Special": [
+                {
+                    name: "Midnight Combo",
+                    price: "\u20B9320",
+                    avgRating: 4.4
                 }
             ]
         }
@@ -29328,67 +29859,90 @@ var _s = $RefreshSig$();
 const RestaurantMenu = ()=>{
     _s();
     const { resId } = (0, _reactRouterDom.useParams)();
-    const resInfo = (0, _useRestaurantMenuDefault.default)(resId); // fetch restaurant data
+    const resInfo = (0, _useRestaurantMenuDefault.default)(resId);
     const [showIndex, setShowIndex] = (0, _react.useState)(null);
-    // Show shimmer while data is loading
     if (!resInfo) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 13,
+        lineNumber: 12,
         columnNumber: 24
     }, undefined);
-    // Destructure with default values
-    const { name = "Restaurant", cuisines = [], price = "-", avgRating = "-", deliveryTime = "-", menu = {} } = resInfo;
-    // Convert menu object into array of [sectionName, items]
+    const { name = "Restaurant", cuisines = [], price = "-", avgRating = "-", deliveryTime = "-", image, menu = {} } = resInfo;
     const categories = Object.entries(menu);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "text-center pt-32 px-4 md:px-12",
+        className: "pt-32 px-4 md:px-12 max-w-4xl mx-auto",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "font-bold my-4 text-3xl",
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "font-semibold text-lg text-gray-700",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex gap-6 items-center mb-6",
                 children: [
-                    cuisines.length > 0 ? cuisines.join(", ") : "N/A",
-                    " | \u20B9",
-                    price,
-                    " | \u2B50 ",
-                    avgRating,
-                    " | \u23F1 ",
-                    deliveryTime,
-                    " mins"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: image,
+                        alt: name,
+                        className: "w-40 h-28 object-cover rounded-lg"
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "font-bold text-3xl mb-1",
+                                children: name
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 38,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-gray-700 font-semibold",
+                                children: [
+                                    cuisines.join(", "),
+                                    " | ",
+                                    price,
+                                    " | \u2B50 ",
+                                    avgRating,
+                                    " | \u23F1 ",
+                                    deliveryTime,
+                                    " mins"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 39,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 37,
+                        columnNumber: 9
+                    }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 32,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             categories.length > 0 ? categories.map(([categoryName, items], index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
                     title: categoryName,
-                    items: items || [],
+                    items: items,
                     showItems: index === showIndex,
                     setShowIndex: ()=>setShowIndex(index === showIndex ? null : index)
                 }, categoryName, false, {
                     fileName: "src/components/RestaurantMenu.js",
-                    lineNumber: 39,
+                    lineNumber: 48,
                     columnNumber: 11
                 }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "text-gray-500 mt-4",
                 children: "Menu not available"
             }, void 0, false, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 48,
+                lineNumber: 59,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 29,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
@@ -29457,7 +30011,7 @@ var _react = require("react");
 var _userContext = require("../utils/UserContext");
 var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 var _s = $RefreshSig$();
-const RestaurantCategory = ({ title, items, showItems, setShowIndex })=>{
+const RestaurantCategory = ({ title, items = [], showItems, setShowIndex })=>{
     _s();
     const { loggedInUser } = (0, _react.useContext)((0, _userContextDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29469,37 +30023,51 @@ const RestaurantCategory = ({ title, items, showItems, setShowIndex })=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         className: "font-semibold text-lg",
-                        children: title
-                    }, void 0, false, {
+                        children: [
+                            title,
+                            " (",
+                            items.length,
+                            ")"
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/RestaurantCategory.js",
-                        lineNumber: 14,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: showItems ? "\u25B2" : "\u25BC"
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCategory.js",
-                        lineNumber: 15,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCategory.js",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             showItems && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4",
-                children: items.map((item, idx)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "border rounded-lg p-3 bg-gray-50 hover:bg-gray-100 shadow-sm min-h-[150px]",
+                children: items.length > 0 ? items.map((item, idx)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "border rounded-lg p-3 bg-gray-50 hover:bg-gray-100 shadow-sm",
                         children: [
+                            item.image && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: item.image,
+                                alt: item.name,
+                                className: "w-full h-32 object-cover rounded mb-2"
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantCategory.js",
+                                lineNumber: 32,
+                                columnNumber: 19
+                            }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                 className: "font-bold truncate",
                                 children: item.name
                             }, void 0, false, {
                                 fileName: "src/components/RestaurantCategory.js",
-                                lineNumber: 26,
-                                columnNumber: 15
+                                lineNumber: 39,
+                                columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "text-sm text-gray-600",
@@ -29509,41 +30077,30 @@ const RestaurantCategory = ({ title, items, showItems, setShowIndex })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/RestaurantCategory.js",
-                                lineNumber: 27,
-                                columnNumber: 15
+                                lineNumber: 40,
+                                columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "text-sm text-gray-600",
+                                children: [
+                                    "Rating: \u2B50 ",
+                                    item.avgRating ?? "N/A"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/RestaurantCategory.js",
+                                lineNumber: 41,
+                                columnNumber: 17
+                            }, undefined),
+                            item.offer && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-sm text-green-600",
                                 children: [
                                     "Offer: ",
                                     item.offer
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/RestaurantCategory.js",
-                                lineNumber: 28,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-sm text-gray-600",
-                                children: [
-                                    "Rating: ",
-                                    item.avgRating
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/RestaurantCategory.js",
-                                lineNumber: 29,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-sm text-gray-600",
-                                children: [
-                                    "Delivery: ",
-                                    item.deliveryTime
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/RestaurantCategory.js",
-                                lineNumber: 30,
-                                columnNumber: 15
+                                lineNumber: 46,
+                                columnNumber: 19
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "text-xs text-gray-500 mt-1",
@@ -29553,18 +30110,25 @@ const RestaurantCategory = ({ title, items, showItems, setShowIndex })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/RestaurantCategory.js",
-                                lineNumber: 31,
-                                columnNumber: 15
+                                lineNumber: 51,
+                                columnNumber: 17
                             }, undefined)
                         ]
                     }, idx, true, {
                         fileName: "src/components/RestaurantCategory.js",
-                        lineNumber: 22,
-                        columnNumber: 13
-                    }, undefined))
+                        lineNumber: 27,
+                        columnNumber: 15
+                    }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "text-gray-500",
+                    children: "No items available"
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCategory.js",
+                    lineNumber: 57,
+                    columnNumber: 13
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/components/RestaurantCategory.js",
-                lineNumber: 20,
+                lineNumber: 23,
                 columnNumber: 9
             }, undefined)
         ]

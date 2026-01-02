@@ -10,8 +10,9 @@ const RestaurantCard = ({ resData }) => {
     name,
     avgRating,
     cuisines,
-    costForTwo,
+    price,
     deliveryTime,
+    image,
   } = resData;
 
   return (
@@ -20,7 +21,7 @@ const RestaurantCard = ({ resData }) => {
       <img
         className="w-full h-40 object-cover rounded-lg"
         alt="res-logo"
-        src={CDN_URL + cloudinaryImageId}
+        src={image}
       />
 
       {/* Name and Cuisines */}
@@ -32,7 +33,7 @@ const RestaurantCard = ({ resData }) => {
       {/* Details */}
       <div className="flex justify-between mt-2 text-sm">
         <span>⭐ {avgRating || "N/A"}</span>
-        <span>₹{costForTwo ? costForTwo / 100 : "N/A"} FOR TWO</span>
+        <span>{price} FOR TWO</span>
       </div>
       <div className="mt-1 text-sm">⏱ {deliveryTime || "N/A"} mins</div>
 
